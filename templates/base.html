@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Base Blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'style/base.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row ">
+            <div class="navbar_content d-flex justify-content-between align-items-center">
+                <h1>
+                    <a href="{% url 'home' %}" class="text-decoration-none text-warning ">Blogs Page</a>
+
+                </h1>
+                <h1>
+                    <a href="{% url 'post_new' %}" class="text-decoration-none text-warning">New Post</a>
+                </h1>
+
+            </div>
+            <hr>
+            <div class="d-flex justify-content-end align-items-center mb-3">
+                {% if user.is_authenticated %}
+                    <h3 class="mt-2 mx-3">Xush kelibsiz <span class="badge bg-success">{{ user.username }}</span></h3>
+                    <h3 class="mt-2">
+                        <a class="btn btn-danger" href="{% url 'logout' %} ">Chiqib ketish</a>
+
+                    </h3>
+                {% else %}
+                    <h3>
+                        <a class="btn btn-success" href="{% url 'login' %} ">Saytga kirish</a>
+                        <a class="btn btn-success" href="{% url 'signup' %} ">Ro'yhatdan o'tish</a>
+                    </h3>
+                {% endif %}
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="blog-page">
+    {% block content %}
+    {% endblock content %}
+</div>
+</body>
+</html>

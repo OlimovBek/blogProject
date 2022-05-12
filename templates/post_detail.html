@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="edit_post text-end">
+            <a href="{% url 'post_edit' post.pk %}" class="btn btn-warning "> Tahrirlash</a>
+            <a href="{% url 'post_delete' post.pk %}" class="btn btn-danger m-4"> O'chirish</a>
+        </div>
+        <div class="row">
+            <h2 class="text-center"><a href="" class="text-primary">{{ post.title }}</a></h2>
+            <p class="text-center fs-2 p-0 author mb-3"><span class=" text-success">{{ post.author }}</span></p>
+            <p class="text-white-50">{{ post.body }}</p>
+        </div>
+    </div>
+{% endblock content %}

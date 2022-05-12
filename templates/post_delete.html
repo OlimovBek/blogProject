@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container post_new">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center card">
+
+                <div class="card-body">
+                    <form action="" method="post">{% csrf_token %}
+                        <p>{{ post.id }}-raqamli postni o'chirasizmi?</p>
+                        <input type="submit" class="btn btn-danger" value="o'chirish">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

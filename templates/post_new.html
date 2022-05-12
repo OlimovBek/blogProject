@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container post_new">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center card">
+                <div class="card-header">
+                    <h1>Yangi Post</h1>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">{% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" class="btn btn-success" value="saqlash">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}
