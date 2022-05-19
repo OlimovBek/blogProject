@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+* a {
+  text-decoration: none !important;
+}
+* body {
+  background-color: darkslategray !important;
+}
+* body .header h1 a {
+  transition: linear 0.4s;
+  font-size: 2.5rem;
+}
+* body .header h1 a:hover {
+  color: #f4f434 !important;
+}
+* body .header hr {
+  color: white;
+  padding: 1px 0 0 0;
+  opacity: 0.6;
+}
+* body .blog-page .post-entry .row .col-lg-6 {
+  cursor: pointer;
+}
+* body .blog-page .post-entry .row .col-lg-6 .card {
+  transition: linear 0.4s;
+}
+* body .blog-page .post-entry .row .col-lg-6 .card .card-header h2 a {
+  transition: linear 0.2s;
+}
+* body .blog-page .post-entry .row .col-lg-6 .card .card-header h2 a:hover {
+  color: darkslategray !important;
+}
+* body .blog-page .post-entry .row .col-lg-6 .card .card-body .author {
+  font-size: 20px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+* body .blog-page .post-entry .row .col-lg-6 .card:hover {
+  transform: scale(1.025) !important;
+}
+
+/*# sourceMappingURL=base.css.map */
